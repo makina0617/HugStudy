@@ -6,6 +6,10 @@
         margin: 0 auto;
     }
 
+    .header {
+        width: 300px;
+    }
+
     .left {
         width: 150px;
     }
@@ -16,12 +20,16 @@
     }
 
     .center-lower {
-        width: 150px;
+        width: 200px;
     }
 
     .right {
         width: 75px;
         float: right;
+    }
+
+    .footer {
+        width: 300px;
     }
 }
 
