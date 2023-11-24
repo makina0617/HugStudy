@@ -11,12 +11,15 @@
     }
 
     .left {
-        width: 150px;
+        width: 100px;
     }
 
-    .center {
+    .center-upper {
         width: 125px;
-        float: left;
+    }
+
+    .center-center {
+        width: 125px;
     }
 
     .center-lower {
