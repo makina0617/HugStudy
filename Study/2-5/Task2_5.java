@@ -34,12 +34,13 @@ public class Task2_5 {
          * 9 || 9 | 18 | 27 | 36 | 45 | 54 | 63 | 72 | 81 |
          */
         for (int a = 1; a <= 9; a++) {
-            // １つの段を表示
+            System.out.print(a + "||");
+
             for (int b = 1; b <= 9; b++) {
                 System.out.print((a * b) + "|");
 
             }
-            // １つの段を表示し終わったところで、改行する
+
             System.out.println();
         }
     }
