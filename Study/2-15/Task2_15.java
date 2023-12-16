@@ -23,10 +23,10 @@ public class Task2_15 {
          * 条件2：「bike1」「bike2」に適切な引数を設定して下さい。
          */
 
-        Bike bike1 = new Bike();
+        Bike bike1 = new Bike(null);
         bike1.run();
         System.out.println("car1は" + bike1.color + "色で" + bike1.type + "タイプです。 現在" + bike1.check());
-        Bike bike2 = new Bike();
+        Bike bike2 = new Bike(null, null);
         bike2.stop();
         System.out.println("car2は" + bike2.color + "色で" + bike2.type + "タイプです。 現在" + bike2.check());
 
