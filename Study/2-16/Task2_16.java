@@ -1,32 +1,30 @@
-/**
- *
- * 本課題では、フィールド変数、メソッドの基本的な使い方を学んでいきましょう。
- * 課題範囲は以下のとおりです。
- * Main.java: 問①から問③
- * 指定された値と変数名を守って記述して下さい。
- *
- */
 public class Task2_16 {
     public static void main(String[] args) {
-
-        // ① firstNameとlastNameという名前の変数を定義し、
-        // firstNameには自分の名前、lastNameには自分の名字で初期化しなさい
-        String firstName = "名前";
-        String lastName = "苗字";
-
-        // ② 関数を定義しなさい。
-        // 関数名：getName
-        // 修飾子：public
-        // 引数には①で定義したfirstNameとlastNameを引数で受け取り、
-        // 連結した値を戻り値とする変数を定義しなさい
-        public String getName = plus(firstName, lastName);
+        getName();
     }
 
+    // ① firstNameとlastNameという名前の変数を定義し、
+    // firstNameには自分の名前、lastNameには自分の名字で初期化しなさい
+    private static void firstName() {
+        System.out.println("名前");
+    }
+
+    private static void lastName() {
+        System.out.println("苗字");
+    }
     // getName関数の呼び出しと出力
-    public static String plus(String firstName, String lastName) {
-        return firstName + lastName;
-        System.out.println(getName(firstName, lastName));
-        System.out.println();
+
+    System.out.println(getName(firstName, lastName));
+    System.out.println();
+    
+    // ② 関数を定義しなさい。
+    // 関数名：getName
+    // 修飾子：public
+    // 引数には①で定義したfirstNameとlastNameを引数で受け取り、
+    // 連結した値を戻り値とする変数を定義しなさい。
+    public static void getName() {
+        firstName();
+        lastName();
     }
 
     int[] arr = { 11, 12, 13, 14, 15, 16, 17, 18, 19, 20 };
