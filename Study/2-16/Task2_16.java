@@ -26,14 +26,11 @@ public class Task2_16 {
     // 要素が奇数の場合には「nは奇数です。」と出力されます。
     // 奇数の判定を行う。
 
-    for(
-    int i = 0;i<arr.length;i++){
-        System.out.println(isOdd(int arr));
-    }
-
     public static void isOdd(int num) {
-        if (num % 2 != 0) {
-            System.out.println(num + "は奇数です。");
+        for (int num = 0; num < arr.length; num++) {
+            if (num % 2 != 0) {
+                System.out.println(num + "は奇数です。");
+            }
         }
     }
 }
