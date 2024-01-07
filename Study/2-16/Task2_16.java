@@ -15,8 +15,8 @@ public class Task2_16 {
 
         // ③ arr 配列をループさせ、isOdd関数を使って配列の要素が奇数かどうかの判定を行いなさい。
         // 要素が奇数の場合には「nは奇数です。」と出力されます。
-        for (int i = 0; i < arr.length; i++) {
-
+        for (int num = 0; num < arr.length; num++) {
+            System.out.println(isOdd(num));
         }
 
     }
