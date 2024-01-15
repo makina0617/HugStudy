@@ -1,4 +1,6 @@
+
 public class Task2_16 {
+
     public static void main(String[] args) {
 
         // ① firstNameとlastNameという名前の変数を定義し、
