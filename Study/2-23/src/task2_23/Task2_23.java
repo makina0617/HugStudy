@@ -3,8 +3,8 @@ package task2_23;
 import java.util.ArrayList;
 
 import constants.Constants;
-import language.Student;
 import person.Person;
+import language.Student;
 
 public class Task2_23 {
     public static void main(String[] args) {
@@ -19,7 +19,7 @@ public class Task2_23 {
         // ②作成した変数「yamada」を利用し名前を表示して下さい。
 
         // ここに解答
-       System.out.println(yamada.getName());
+        yamada.introduce();
         // ③Personクラスの変数名「ishitani」というインスタンスを作成して下さい。
         // 引数には1:石谷花子 2:HTML を入れて下さい。
         // また「HTML」は、Constants.javaのものを扱って下さい。
