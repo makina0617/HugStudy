@@ -20,7 +20,7 @@ public class Person {
     }
 
     public void introduce() {
-        System.out.println("僕の名前は"+name+"です。");
+        System.out.println("僕の名前は" + name + "です。");
     }
 
     public void studyLanguage() {

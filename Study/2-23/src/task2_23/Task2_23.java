@@ -3,8 +3,8 @@ package task2_23;
 import java.util.ArrayList;
 
 import constants.Constants;
-import person.Person;
 import language.Student;
+import person.Person;
 
 public class Task2_23 {
     public static void main(String[] args) {
@@ -35,8 +35,9 @@ public class Task2_23 {
 
         // ここに解答
         Student person1 = new Student("山田太郎", Constants.LANGUAGE_JAVA);
-        person1.studyLanguage();
         Student person2 = new Student("石谷花子", Constants.LANGUAGE_HTML);
+
+        person1.studyLanguage();
         person2.studyLanguage();
     }
 }
