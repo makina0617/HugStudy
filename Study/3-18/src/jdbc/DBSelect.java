@@ -11,10 +11,13 @@ public class DBSelect {
     /** ドライバーのクラス名 */
     private static final String POSTGRES_DRIVER = "org.postgresql.Driver";
     /** ・JDMC接続先情報 */
+ // 問① データベースのホスト名・データベース名を定数にしなさい。
     private static final String JDBC_CONNECTION = "jdbc:postgresql://localhost:5432/jdbc_db";
     /** ・ユーザー名 */
+ // 問② データベースのユーザー名を定数にしなさい。
     private static final String USER = "postgres";
     /** ・パスワード */
+ // 問③ データベースのパスワードを定数にしなさい。
     private static final String PASS = "makina";
 
     public static void main(String[] args) {
@@ -25,12 +28,15 @@ public class DBSelect {
 
         try {
             Class.forName(POSTGRES_DRIVER);
-            connection = DriverManager.getConnection(JDBC_CONNECTION, USER, PASS);
+         // 問④ 問①〜③の定数を使ってデータベースと接続しなさい。
+            connection = DriverManager.getConnection("jdbc:postgresql://localhost:5432/jdbc_db", "postgres", "makina");
             statement = connection.createStatement();
-            String SQL = "SELECT * FROM shohin_tb";
+         // 問⑤ SHOHIN_IDが001と020のものを表示させるためのSQL文を記述しましょう。
+            String SQL = "SELECT * FROM shohin_tb WHERE shohin_id = '001' OR shohin_id = '020'";
             resultSet = statement.executeQuery(SQL);
 
             while (resultSet.next()) {
+            	// 問⑥ それぞれカラム名を入力して下さい。
                 String column1 = resultSet.getString("shohin_id");
                 String column2 = resultSet.getString("shohin_name");
                 String column3 = resultSet.getString("tanka");
@@ -61,7 +67,6 @@ public class DBSelect {
             } catch (SQLException e) {
                 e.printStackTrace();
             }
-            System.out.println("DB接続を終了します");
         }
     }
 }
