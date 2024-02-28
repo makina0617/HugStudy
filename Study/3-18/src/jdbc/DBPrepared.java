@@ -1,10 +1,11 @@
+package jdbc;
+
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
-
 /**
  * ■ データベースに接続するプログラム
  * データベースへ接続し、指定(任意)の値を取得し、表示させる処理。
@@ -51,10 +52,10 @@ public class DBPrepared {
             * PreparedStatementインターフェースを使って値をSQL文にセットしてみましょう。
             */
             
-            preparedStatement.setString(1,"'001'");
-            preparedStatement.setString(2,"'020'");
+            preparedStatement.setString(1,"001");
+            preparedStatement.setString(2,"020");
 
-            resultSet = preparedStatement.executeQuery();
+            resultSet=preparedStatement.executeQuery();
             
             while (resultSet.next()) {
                 String column1 = resultSet.getString("shohin_id");
