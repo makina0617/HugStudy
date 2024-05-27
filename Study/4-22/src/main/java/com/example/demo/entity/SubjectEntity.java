@@ -1,6 +1,5 @@
 package com.example.demo.entity;
 
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -11,12 +10,12 @@ import javax.persistence.Table;
 import lombok.Data;
 
 /**
- * ユーザー情報 Entity
- */
+* ユーザー情報 Entity
+*/
 @Data
 @Entity
-@Table(name = "test", schema = "public")
-public class TestEntity  {
+@Table(name = "subject")
+public class SubjectEntity  {
 
   /**
    * ID
@@ -26,14 +25,12 @@ public class TestEntity  {
   @Column(name = "id")
   private Integer id;
 
-
   /**
    * 名前
    */
   @Column(name = "name")
   private String name;
-
-
+  
   /**
    * 住所
    */
@@ -46,5 +43,10 @@ public class TestEntity  {
    */
   @Column(name = "phone")
   private String phone;
-
+  
+  /**
+   * 参拝時間
+   */
+  @Column(name = "Visitingtime")
+  private String Visitingtime;
 }

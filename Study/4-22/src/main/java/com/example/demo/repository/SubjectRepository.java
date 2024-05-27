@@ -3,11 +3,11 @@ package com.example.demo.repository;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import com.example.demo.entity.TestEntity;
+import com.example.demo.entity.SubjectEntity;
 
 /**
- * ユーザー情報 Repository
- */
+* 科目情報 Repository
+*/
 @Repository
-public interface TestRepository extends JpaRepository<TestEntity, Integer> {
+public interface SubjectRepository extends JpaRepository<SubjectEntity, Integer> {
 }

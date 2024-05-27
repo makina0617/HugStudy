@@ -1,7 +1,7 @@
 table {
     width: 90%;
     border-collapse: collapse;
-    font-size: 12px;
+    font-size: 20px;
 }
 table th, table td {
     border: 1px solid #ddd;
@@ -13,3 +13,4 @@ table th {
 .center {
     text-align: center;
 }
+
