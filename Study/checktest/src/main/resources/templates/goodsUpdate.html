@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>チェックテスト 編集</title>
+    <link rel="stylesheet" href="goodsUpdate.css">
+    <!-- <link th:href="@{/css/goodsUpdate.css}" rel="stylesheet"> -->
+</head>
+
+<body>
+    <div id="wrapper">
+        <left class="left"></left>
+        <right class="right">
+            <h1>編集</h1>
+            <form th:action="@{goodsUpdate}" th:object="${goodsUpdateRequest}" th:method="post">
+                <div class="form">
+                    <div class="main">
+                        <div class="text">商品ID</div>
+                        <div class="item">
+                            <input type="text" th:field="*{id}">
+                        </div>
+                        <div class="text">商品名</div>
+                        <div class="item">
+                            <input type="text" th:field="*{name}">
+                        </div>
+                        <div class="text">カラー</div>
+                        <div class="box">
+                            <select th:field="*{color}">
+                                <option value="">---選択---</option>
+                                <option value="赤色">赤色</option>
+                                <option value="ピンク色">ピンク色</option>
+                                <option value="オレンジ色">オレンジ色</option>
+                                <option value="黄色">黄色</option>
+                                <option value="緑色">緑色</option>
+                                <option value="青色">青色</option>
+                                <option value="ムラサキ色">ムラサキ色</option>
+                                <option value="黒色">黒色</option>
+                                <option value="白色">白色</option>
+                            </select>
+                        </div>
+                        <div class="text">在庫（L）</div>
+                        <div class="count">
+                            <input type="number" name="example" min="0" th:field="*{size_L}">
+                        </div>
+                        <div class="text">在庫(M)</div>
+                        <div class="count">
+                            <input type="number" name="example" min="0" th:field="*{size_M}">
+                        </div>
+                        <div class="text-center">
+                            <a th:href="@{/goodsList/(id=*{id})}" class="btn">戻る</a>
+                            <input type="submit" name="btn" value="登録" class="btn">
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </right>
+    </div>
+</body>
+
+</html>

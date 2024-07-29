@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>チェックテスト 商品削除</title>
+    <link rel="stylesheet" href="goodsDelete.css">
+    <!-- <link th:href="@{/css/goodsCreate}" rel="stylesheet"> -->
+    <div class="wrapper">
+        <div class="left">
+            <div class="right">
+                <h1>商品削除</h1>
+                <form th:action="@{goodsDelete}" th:object="${goodsForm}" th:method="post">
+                </form>
+            </div>
+        </div>
+    </div>
+</head>
+</html>

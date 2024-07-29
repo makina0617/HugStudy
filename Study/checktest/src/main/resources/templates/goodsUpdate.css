@@ -1,0 +1,96 @@
+#wrapper {
+    /* 共通の処理 */
+    width: 100%;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.left {
+    background-color: rgb(152, 242, 214);
+    width: 300px;
+    height: 100vh;
+    float: left;
+}
+
+.right {
+    background-color: rgb(152, 242, 214);
+    height: 200px;
+
+}
+
+h1 {
+    font-size: 50px;
+    color: aliceblue;
+    padding-top: 55px;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: rgb(97, 94, 94);
+}
+
+.main {
+    margin: auto;
+    border-collapse: collapse;
+    position: absolute;
+    top: 350px;
+    right: 0;
+    bottom: 0;
+    left: 900px;
+    font-size: 20px;
+}
+
+.text {
+    background-color: rgb(152, 242, 214);
+    width: 500px;
+    font-weight: bold;
+}
+
+/* 商品ID、商品名 */
+.item input[type='text'] {
+    width: 500px;
+    transition: 0.3s;
+    letter-spacing: 1px;
+    border: 1px solid rgb(97, 94, 94);
+    border-radius: 3px;
+    padding: 0.3em;
+    font-size: 25px;
+    margin: 10px 0px 30px 0px;
+}
+
+/* カラー */
+.box select {
+    width: 500px;
+    height: 35px;
+    font-size: 25px;
+    text-align: center;
+    border: 1px solid rgb(97, 94, 94);
+    border-radius: 3px;
+    margin: 10px 0px 30px 0px;
+}
+
+/* 在庫 */
+.count input[type='number'] {
+    width: 500px;
+    margin: 10px 0px 30px 0px;
+    text-align: center;
+    font-size: 25px;
+    border: 1px solid rgb(97, 94, 94);
+}
+
+.btn {
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0px 80px 0px 0px;
+    padding: 5px 10px 5px 10px;
+    color: #000000;
+    transition: 0.3s ease-in-out;
+    border: 0.2rem solid rgb(152, 242, 214);
+    text-align: center;
+    font-weight: bold;
+    border-radius: 10px;
+    font-size: 30px;
+}

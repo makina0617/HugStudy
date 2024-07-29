@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>チェックテスト 商品一覧</title>
+<link rel="stylesheet" href="goodsList.css">
+<!-- <link th:href="@{/css/goodsList.css}" rel="stylesheet"> -->
+</head>
+<body>
+    <div id="wrapper">
+        <div class="left"></div>
+        <div class="right">
+            <h1>商品一覧</h1>
+            <a th:href="@{goodsCreate}" class="btn01">商品登録</a>
+        </div>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>商品ID</th>
+                    <th>商品名</th>
+                    <th>カラー</th>
+                    <th>在庫（L）</th>
+                    <th>在庫（M）</th>
+                    <th>入荷日</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="goods_tb: ${goodsList}" th:object="${goods_tb}">
+                    <td th:text="*{id}"></td>
+                    <td th:text="*{name}"></td>
+                    <td th:text="*{color}"></td>
+                    <td th:text="*{size_L}"></td>
+                    <td th:text="*{size_M}"></td>
+                    <td th:text="*{date}"></td>
+                    <td><a th:href="@{/update/{id}(id=*{id})}" class="btn02">編集</a></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
