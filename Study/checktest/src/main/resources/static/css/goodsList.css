@@ -1,7 +1,7 @@
 #wrapper {
     margin: 0;
     padding: 0;
-    background-color: rgb(152, 242, 214); /* 画面外側の背景色 */
+    background-color: rgb(152, 242, 214);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -10,7 +10,7 @@
 
  .top{
     width: 80%;
-    background-color: white; /* 内側のコンテンツの背景色 */
+    background-color: white; 
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -33,11 +33,11 @@ h1 {
     font-size: 50px;
     color: rgb(97, 94, 94);
     padding-top: 10px;
-    padding-right: 200px;
-    text-align: center; /* 中央揃え */
-    margin-bottom: 20px; /* タイトル下部に余白を追加 */
+    padding-right: 80px;
+    text-align: center; 
+    margin-bottom: 20px; 
     flex-grow: 1;
-    text-align: center; /* h1を中央揃え */
+    text-align: center; 
 }
 
 .table {
@@ -63,26 +63,29 @@ h1 {
 }
 
 .btn01 {
-    padding: 10px;
-    color: #000000;
-    transition: 0.3s ease-in-out;
-    border: 2px solid rgb(0, 0, 0);
+    flex: 1;
+    margin: 0 5px;
     text-align: center;
-    border-radius: 10px;
-    background-color: aliceblue;
-    font-size: 20px;
-
+    padding: 10px;
+    background-color: #008CBA;
+    color: white;
+    border: 1px solid #005f73;
+    border-radius: 5px;
+    font-size: 25px;
+    cursor: pointer;
+    text-decoration: none;
 }
 
 .btn02 {
-    display: block;
-    width: 100px;
-    padding: 5px;
-    color: #000000;
-    transition: 0.3s ease-in-out;
-    border: 2px solid rgb(0, 0, 0);
+    flex: 1;
+    margin: 0 5px;
     text-align: center;
-    border-radius: 10px;
+    padding: 10px;
     background-color: aliceblue;
-    margin: auto;
+    color:rgb(0, 0, 0);
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 5px;
+    font-size: 20px;
+    cursor: pointer;
+    text-decoration: none;
 }

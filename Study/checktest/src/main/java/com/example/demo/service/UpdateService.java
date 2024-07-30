@@ -26,8 +26,5 @@ public class UpdateService {
 	       update.setCreate_date(updateUpdateRequest.getCreate_date());
 	       updateRepository.save(update);
 	   }
-	public void delete(Integer id) {
-		UpdateEntity update = findById(id);
-		updateRepository.delete(update);
-	}
+	
 }

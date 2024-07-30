@@ -22,7 +22,7 @@ import com.example.demo.service.UpdateService;
 public class UpdateController {
 	@Autowired
 	UpdateService updateService;
-	
+//	編集画面表示
 	@GetMapping("/goodsUpdate/{id}")
 	public String UpdateDisplay(@PathVariable Integer id, Model model) {
 		UpdateEntity update = updateService.findById(id);
@@ -33,11 +33,13 @@ public class UpdateController {
 		updateUpdateRequest.setSize_l(update.getSize_l());
 		updateUpdateRequest.setSize_m(update.getSize_m());
 		updateUpdateRequest.setCreate_date(update.getCreate_date());
-		model.addAttribute("updateRequest",updateUpdateRequest);
+		model.addAttribute("updateUpdateRequest",updateUpdateRequest);
 		   return "goodsUpdate";
 	}
+//	科目更新
+	
 	@PostMapping("/goodsUpdate")
-	 public String goodsUpdate(@Validated @ModelAttribute UpdateForm updateRequest, BindingResult result, Model model) {
+	 public String goodsUpdate(@Validated @ModelAttribute UpdateForm updateUpdateRequest, BindingResult result, Model model) {
 	   if (result.hasErrors()) {
 	     // 入力チェックエラーの場合
 	     List<String> errorList = new ArrayList<String>();
@@ -48,8 +50,8 @@ public class UpdateController {
 	     return "goodsUpdate";
 	   }
 	     
-	  // 科目情報の登録
-		   updateService.update(updateRequest);
-		   return String.format("redirect:/goodsList/%d",updateRequest.getId());
+	  // 科目情報の更新
+		   updateService.update(updateUpdateRequest);
+		   return String.format("redirect:/goodsList", updateUpdateRequest.getId());
 		}
 }
