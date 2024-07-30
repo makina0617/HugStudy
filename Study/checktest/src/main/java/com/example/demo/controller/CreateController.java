@@ -10,6 +10,7 @@ import org.springframework.validation.BindingResult;
 import org.springframework.validation.ObjectError;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 
 import com.example.demo.form.CreateForm;
@@ -26,8 +27,8 @@ public class CreateController {
 		   return "goodsCreate";
 	}
 	
-	@PostMapping("/goodsCreate/create")
-	 public String goodsCreate(@Validated CreateForm createRequest, BindingResult result, Model model) {
+	@PostMapping("/goodsCreate")
+	 public String goodsCreate(@Validated @ModelAttribute CreateForm createRequest, BindingResult result, Model model) {
 	   if (result.hasErrors()) {
 	     // 入力チェックエラーの場合
 	     List<String> errorList = new ArrayList<String>();

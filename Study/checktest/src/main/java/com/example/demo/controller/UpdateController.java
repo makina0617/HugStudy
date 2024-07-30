@@ -36,7 +36,7 @@ public class UpdateController {
 		model.addAttribute("updateRequest",updateUpdateRequest);
 		   return "goodsUpdate";
 	}
-	@PostMapping("/goodsUpdate/update")
+	@PostMapping("/goodsUpdate")
 	 public String goodsUpdate(@Validated @ModelAttribute UpdateForm updateRequest, BindingResult result, Model model) {
 	   if (result.hasErrors()) {
 	     // 入力チェックエラーの場合

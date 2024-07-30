@@ -10,7 +10,7 @@
     <div id="wrapper">
         <div class="top">
             <h1>編集</h1>
-			<form th:action="@{/goodsUpdate/update}" th:object="${updateUpdateRequest}" th:method="post">
+			<form th:action="@{/goodsUpdate}" th:object="${updateUpdateRequest}" th:method="post">
                 <div class="form">
                     <div class="main">
                         <div class="text">商品ID</div>
@@ -50,7 +50,6 @@
 						</div>
                         <div class="button-container">
                             <a th:href="@{/goodsList}" class="btn">戻る</a>
-							<input type="submit" name="btn" value="削除" class="btn1">
                             <input type="submit" name="btn" value="登録" class="btn">
                         </div>
                     </div>
