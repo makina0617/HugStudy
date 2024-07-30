@@ -8,6 +8,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.validation.constraints.NotNull;
 
 import org.springframework.format.annotation.DateTimeFormat;
 
@@ -15,6 +16,7 @@ import lombok.Data;
 
 @Data
 @Entity
+@NotNull
 @Table(name = "goods_tb", schema = "public")
 
 public class CreateEntity {

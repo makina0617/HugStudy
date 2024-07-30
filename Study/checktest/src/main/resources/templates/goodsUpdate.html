@@ -15,7 +15,7 @@
                     <div class="main">
                         <div class="text">商品ID</div>
                         <div class="item">
-                            <input type="text" th:field="*{id}">
+                            <input type="text" th:field="*{id}" readonly>
                         </div>
                         <div class="text">商品名</div>
                         <div class="item">
@@ -46,7 +46,7 @@
                         </div>
 						<div class="text">入荷日</div>
 						<div class="create_date">
-							<input type="date" th:field="*{create_date}">
+							<input type="date" th:field="*{create_date}" readonly>
 						</div>
                         <div class="button-container">
                             <a th:href="@{/goodsList}" class="btn">戻る</a>

@@ -9,11 +9,14 @@
 <body>
     <div id="wrapper">
         <div class="top">
+			<div th:if="${validationError}" th:each="error : ${validationError}">
+			      <label class="text-danger" th:text="${error}"></label>
+			    </div>
             <h1>商品登録</h1>
 			<form th:action="@{/goodsCreate}" th:object="${createRequest}" th:method="post">
                 <div class="form">
                     <div class="main">
-                        <div class="text">商品ID</div>
+                        <div class="text">商品ID	<span class="error-message" th:if="${#fields.hasErrors('color')}" th:errors="*{color}"></span></div>
                         <div class="item">
                             <input type="text" th:field="*{id}">
                         </div>
@@ -23,7 +26,7 @@
                         </div>
                         <div class="text">カラー</div>
                         <div class="box">
-                            <select th:field="*{color}">
+                            <select th:field="*{color}" id="color" name="color">
                                 <option value="">---選択---</option>
                                 <option value="赤色">赤色</option>
                                 <option value="ピンク色">ピンク色</option>
