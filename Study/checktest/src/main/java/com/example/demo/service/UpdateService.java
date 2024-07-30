@@ -27,4 +27,8 @@ public class UpdateService {
 	       updateRepository.save(update);
 	   }
 	
+	public void delete(Integer id) {
+		UpdateEntity delete = findById(id);
+		updateRepository.delete(delete);
+	}
 }

@@ -54,4 +54,12 @@ public class UpdateController {
 		   updateService.update(updateUpdateRequest);
 		   return String.format("redirect:/goodsList", updateUpdateRequest.getId());
 		}
+	
+	@GetMapping("/goodsUpdate/{id}/delete")
+	public String Delete(@PathVariable Integer id, Model model) {
+		// 科目情報の削除
+		updateService.delete(id);
+		return "redirect:/goodsList";
+	}
+	
 }
