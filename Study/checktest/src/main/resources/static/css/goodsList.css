@@ -1,6 +1,19 @@
 #wrapper {
-    /* 共通の処理 */
-    width: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(152, 242, 214); /* 画面外側の背景色 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+ .top{
+    width: 80%;
+    background-color: white; /* 内側のコンテンツの背景色 */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 * {
@@ -9,86 +22,67 @@
     box-sizing: border-box;
 }
 
-.left {
-    background-color: rgb(152, 242, 214);
-    width: 300px;
-    height: 100vh;
-    float: left;
-}
-
-.right{
-    background-color: rgb(152, 242, 214);
-    height: 200px;
-    
+.centr {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 h1 {
     font-size: 50px;
-    color: aliceblue;
-    padding-top: 30px;
-    -webkit-text-stroke-width: 2px;
-    -webkit-text-stroke-color: rgb(97, 94, 94);
+    color: rgb(97, 94, 94);
+    padding-top: 10px;
+    padding-right: 200px;
+    text-align: center; /* 中央揃え */
+    margin-bottom: 20px; /* タイトル下部に余白を追加 */
+    flex-grow: 1;
+    text-align: center; /* h1を中央揃え */
 }
 
 .table {
-    margin: auto;
+    width: 100%;
     border-collapse: collapse;
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 300px;
-    height: 3.2rem;
+    margin-top: 20px;
 }
 
 .table th,
-td {
+.table td {
     border-bottom: 2px solid rgb(0, 0, 0);
 }
 
 .table th {
     font-size: 25px;
-    font-weight: bold;
     text-align: left;
     padding: 10px 30px;
 }
 
 .table td {
     font-size: 22px;
-    padding: 2px 18px;
+    padding: 10px 30px;
 }
 
 .btn01 {
-    float: right;
-    position: relative;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    margin: 0px 80px 0px 0px;
-    padding: 5px 10px 5px 10px;
-    color: #000000;
-    transition: 0.3s ease-in-out;
-    border: 0.2rem solid rgb(0, 0, 0);
-    text-align: center;
-    font-weight: bold;
-    border-radius: 10px;
-    background-color: aliceblue;
-    font-size: 30px;
-}
-
-.btn02 {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 5px 2px 5px 2px;
-    width: 100px;
-    padding: 1px 5px 1px 5px;
+    padding: 10px;
     color: #000000;
     transition: 0.3s ease-in-out;
     border: 2px solid rgb(0, 0, 0);
     text-align: center;
-    font-weight: bold;
     border-radius: 10px;
     background-color: aliceblue;
+    font-size: 20px;
+
+}
+
+.btn02 {
+    display: block;
+    width: 100px;
+    padding: 5px;
+    color: #000000;
+    transition: 0.3s ease-in-out;
+    border: 2px solid rgb(0, 0, 0);
+    text-align: center;
+    border-radius: 10px;
+    background-color: aliceblue;
+    margin: auto;
 }

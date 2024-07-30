@@ -1,6 +1,8 @@
 #wrapper {
-    /* 共通の処理 */
     width: 100%;
+    padding-top: 88px;
+    background-color: rgb(152, 242, 214);
+    padding-bottom: 88px; 
 }
 
 * {
@@ -9,23 +11,116 @@
     box-sizing: border-box;
 }
 
-.left {
-    background-color: rgb(152, 242, 214);
-    width: 300px;
-    height: 100vh;
-    float: left;
-}
 
-.right {
-    background-color: rgb(152, 242, 214);
-    height: 200px;
-
+.top {
+    margin: 0 auto;
+    width: 80%;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 h1 {
     font-size: 50px;
-    color: aliceblue;
-    padding-top: 30px;
-    -webkit-text-stroke-width: 2px;
-    -webkit-text-stroke-color: rgb(97, 94, 94);
+    color: rgb(97, 94, 94);
+    padding-top: 10px;
+    text-align: center;
+    margin-bottom: 20px; 
+}
+
+.main {
+    width: 100%;
+    font-size: 20px;
+    padding-bottom: 50px;
+    position: relative;
+    margin-top: 20px;
+}
+
+.text {
+    background-color: white;
+    width: 100%;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+/* 商品ID、商品名 */
+.item input[type='text'] {
+    width: 50%; 
+    transition: 0.3s;
+    letter-spacing: 1px;
+    border: 1px solid rgb(97, 94, 94);
+    border-radius: 3px;
+    padding: 0.3em;
+    font-size: 20px;
+    margin: 10px auto 20px auto;
+    display: block;
+}
+
+/* カラー */
+.box select {
+    width: 50%;
+    height: 35px;
+    font-size: 25px;
+    text-align: center;
+    border: 1px solid rgb(97, 94, 94);
+    border-radius: 3px;
+    margin: 10px auto 20px auto;
+    display: block;
+}
+
+/* 在庫 */
+.count input[type='number']{
+    width: 50%;
+    height: 35px;
+    margin: 10px auto 20px auto;
+    text-align: center;
+    font-size: 25px;
+    border: 1px solid rgb(97, 94, 94);
+    display: block;
+}
+
+.create_date input[type='date']{
+    width: 50%;
+    height: 35px;
+    margin: 10px auto 20px auto;
+    font-size: 25px;
+    text-align: center;
+    border: 1px solid rgb(97, 94, 94);
+    display: block;
+}
+
+
+
+
+/* ボタン配置用のスタイル */
+.button-container {
+    display: flex;
+    justify-content: space-between;
+    width: 300px;
+    margin: 20px auto 0 auto; 
+}
+
+.btn {
+    flex: 1;
+    margin: 0 5px;
+    text-align: center;
+    padding: 10px;
+    background-color: #008CBA;
+    color: white;
+    border: 1px solid #005f73;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.btn:hover {
+    background-color: #007B9A;
+}
+
+.error{
+	color: red;
+	font-size: 5px;
 }

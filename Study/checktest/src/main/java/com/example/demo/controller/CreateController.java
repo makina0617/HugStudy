@@ -20,13 +20,13 @@ public class CreateController {
 	@Autowired
 	CreateService createService;
 	
-	@GetMapping("goodsCreate")
+	@GetMapping("/goodsCreate")
 	public String goodsRegister(Model model) {
-		model.addAttribute("goodsRequest", new CreateForm());
+		model.addAttribute("createRequest", new CreateForm());
 		   return "goodsCreate";
 	}
 	
-	@PostMapping("goosdCreate/create")
+	@PostMapping("/goodsCreate/create")
 	 public String goodsCreate(@Validated CreateForm createRequest, BindingResult result, Model model) {
 	   if (result.hasErrors()) {
 	     // 入力チェックエラーの場合
@@ -36,10 +36,10 @@ public class CreateController {
 	     }
 	     model.addAttribute("createRequest", new CreateForm());
 	     model.addAttribute("validationError", errorList);
-	     return "goodsList";
+	     return "goodsCreate";
 	   }
 	   // 科目情報の登録
-	   CreateService.create(createRequest);
+	   createService.create(createRequest);
 	   return "redirect:/goodsList";
-	 }
+	}
 }

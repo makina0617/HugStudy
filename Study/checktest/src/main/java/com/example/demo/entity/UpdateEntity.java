@@ -17,7 +17,7 @@ import lombok.Data;
 @Entity
 @Table(name = "goods_tb", schema = "public")
 
-public class CreateEntity {
+public class UpdateEntity {
 	
 //	商品ID
 	@Id

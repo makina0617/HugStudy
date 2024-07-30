@@ -1,19 +1,16 @@
 <!DOCTYPE html>
-<html>
-
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
-    <meta charset="UTF-8">
-    <title>チェックテスト 編集</title>
-    <link rel="stylesheet" href="goodsUpdate.css">
-    <!-- <link th:href="@{/css/goodsUpdate.css}" rel="stylesheet"> -->
+<meta charset="UTF-8">
+<title>チェックテスト 編集</title>
+<!-- <link rel="stylesheet" href="goods Create.css">-->
+<link th:href="@{/css/goodsUpdate.css}" rel="stylesheet">
 </head>
-
 <body>
     <div id="wrapper">
-        <left class="left"></left>
-        <right class="right">
+        <div class="top">
             <h1>編集</h1>
-            <form th:action="@{goodsUpdate}" th:object="${goodsUpdateRequest}" th:method="post">
+			<form th:action="@{/goodsUpdate/update}" th:object="${updateUpdateRequest}" th:method="post">
                 <div class="form">
                     <div class="main">
                         <div class="text">商品ID</div>
@@ -41,21 +38,25 @@
                         </div>
                         <div class="text">在庫（L）</div>
                         <div class="count">
-                            <input type="number" name="example" min="0" th:field="*{size_L}">
+                            <input type="number" name="example" min="0" value="0" th:field="*{size_l}">
                         </div>
                         <div class="text">在庫(M)</div>
                         <div class="count">
-                            <input type="number" name="example" min="0" th:field="*{size_M}">
+                            <input type="number" name="example" min="0" value="0" th:field="*{size_m}">
                         </div>
-                        <div class="text-center">
-                            <a th:href="@{/goodsList/(id=*{id})}" class="btn">戻る</a>
+						<div class="text">入荷日</div>
+						<div class="create_date">
+							<input type="date" th:field="*{create_date}">
+						</div>
+                        <div class="button-container">
+                            <a th:href="@{/goodsList}" class="btn">戻る</a>
+							<input type="submit" name="btn" value="削除" class="btn1">
                             <input type="submit" name="btn" value="登録" class="btn">
                         </div>
                     </div>
                 </div>
             </form>
-        </right>
+        </div>
     </div>
 </body>
-
 </html>

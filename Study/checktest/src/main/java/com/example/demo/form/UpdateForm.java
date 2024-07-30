@@ -10,7 +10,7 @@ import org.springframework.format.annotation.DateTimeFormat;
 import lombok.Data;
 
 @Data
-public class CreateForm implements Serializable{
+public class UpdateForm implements Serializable{
 // 商品ID
  @NotNull(message = "商品IDを入力してください")
  private Integer id;
